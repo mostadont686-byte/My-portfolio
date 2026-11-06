@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -8,7 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Portfolio of Alexandr Tikhon, a self-taught programming student learning web development.">
+  <meta name="description" content="Portfolio of Alexandr Tikhon, aspiring software developer.">
 
   <title>Alexandr Tikhon | Developer Portfolio</title>
 
@@ -20,8 +22,6 @@
 
       --panel: rgba(18, 27, 49, .82);
 
-      --panel-2: #141e35;
-
       --text: #f4f7ff;
 
       --muted: #aab5cc;
@@ -31,8 +31,6 @@
       --accent-2: #48d6c5;
 
       --line: rgba(180, 195, 230, .16);
-
-      --shadow: 0 24px 70px rgba(0, 0, 0, .28);
 
     }
 
@@ -48,13 +46,13 @@
 
       background:
 
-        radial-gradient(ellipse at 12% 8%, rgba(99, 87, 255, .22), transparent 34rem),
+        radial-gradient(ellipse at 12% 8%, rgba(99,87,255,.22), transparent 34rem),
 
-        radial-gradient(ellipse at 88% 30%, rgba(44, 206, 190, .13), transparent 30rem),
+        radial-gradient(ellipse at 88% 30%, rgba(44,206,190,.13), transparent 30rem),
 
         var(--bg);
 
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Arial, sans-serif;
 
       line-height: 1.65;
 
@@ -62,107 +60,299 @@
 
     a { color: inherit; text-decoration: none; }
 
-    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: auto; }
 
     header {
 
       position: sticky; top: 0; z-index: 10;
 
-      background: rgba(11, 16, 32, .78);
-
-      backdrop-filter: blur(16px);
+      background: rgba(11,16,32,.9);
 
       border-bottom: 1px solid var(--line);
 
     }
 
-    nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    nav {
 
-    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.12rem; }
+      min-height: 74px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+    }
+
+    .brand { font-weight: 800; font-size: 1.2rem; }
 
     .brand span { color: var(--accent-2); }
 
-    .navlinks { display: flex; gap: 26px; color: var(--muted); font-size: .93rem; }
+    .navlinks { display: flex; gap: 20px; color: var(--muted); font-size: .9rem; }
 
-    .navlinks a:hover { color: var(--text); }
+    .navlinks a:hover { color: white; }
 
-    .hero { padding: 100px 0 82px; display: grid; grid-template-columns: 1.35fr .65fr; gap: 54px; align-items: center; }
+    .hero {
 
-    .eyebrow { color: var(--accent-2); text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 800; }
+      padding: 90px 0;
 
-    h1 { font-size: clamp(2.8rem, 7vw, 5.4rem); line-height: 1.02; letter-spacing: -.065em; margin: 16px 0 22px; }
+      display: grid;
 
-    h1 span { background: linear-gradient(100deg, #a99fff, #55e1d0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      grid-template-columns: 1.35fr .65fr;
 
-    .lead { color: var(--muted); font-size: 1.12rem; max-width: 620px; }
+      gap: 50px;
 
-    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+      align-items: center;
 
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 19px; border-radius: 12px; font-weight: 750; border: 1px solid var(--line); transition: transform .2s, border-color .2s; }
+    }
 
-    .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .eyebrow {
 
-    .btn.primary { color: #0b1020; background: linear-gradient(100deg, #a99fff, #61dfd0); border: 0; }
+      color: var(--accent-2);
 
-    .profile-card { padding: 28px; border: 1px solid var(--line); border-radius: 26px; background: linear-gradient(145deg, rgba(31, 43, 73, .9), rgba(16, 24, 43, .88)); box-shadow: var(--shadow); text-align: center; }
+      text-transform: uppercase;
 
-    .avatar { width: 112px; height: 112px; display: grid; place-items: center; margin: 0 auto 18px; border-radius: 30px; background: linear-gradient(135deg, #887bff, #46d6c6); color: #10172a; font-size: 3.2rem; font-weight: 900; }
+      letter-spacing: .15em;
+
+      font-size: .76rem;
+
+      font-weight: bold;
+
+    }
+
+    h1 {
+
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+
+      line-height: 1.05;
+
+      letter-spacing: -.06em;
+
+      margin: 16px 0;
+
+    }
+
+    h1 span {
+
+      background: linear-gradient(100deg, #a99fff, #55e1d0);
+
+      -webkit-background-clip: text;
+
+      background-clip: text;
+
+      color: transparent;
+
+    }
+
+    .lead { color: var(--muted); font-size: 1.1rem; max-width: 620px; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+    .btn {
+
+      display: inline-block;
+
+      padding: 12px 18px;
+
+      border-radius: 12px;
+
+      font-weight: bold;
+
+      border: 1px solid var(--line);
+
+    }
+
+    .btn.primary {
+
+      color: #0b1020;
+
+      background: linear-gradient(100deg, #a99fff, #61dfd0);
+
+      border: 0;
+
+    }
+
+    .profile-card {
+
+      padding: 28px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 25px;
+
+      background: var(--panel);
+
+      text-align: center;
+
+    }
+
+    .avatar {
+
+      width: 110px; height: 110px;
+
+      display: grid; place-items: center;
+
+      margin: 0 auto 18px;
+
+      border-radius: 30px;
+
+      background: linear-gradient(135deg, #887bff, #46d6c6);
+
+      color: #10172a;
+
+      font-size: 3rem;
+
+      font-weight: 900;
+
+    }
 
     .profile-card h2 { margin: 0; font-size: 1.3rem; }
 
-    .profile-card p { color: var(--muted); margin: 6px 0 0; }
+    .profile-card p { color: var(--muted); }
 
-    .location { display: inline-block; margin-top: 18px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 99px; color: var(--muted); font-size: .85rem; }
+    .location {
 
-    section { padding: 64px 0; }
+      display: inline-block;
 
-    .section-label { color: var(--accent-2); font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .16em; }
+      padding: 6px 11px;
 
-    h2.section-title { margin: 8px 0 28px; font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: -.045em; }
+      border: 1px solid var(--line);
 
-    .about { max-width: 780px; color: var(--muted); font-size: 1.06rem; }
+      border-radius: 30px;
 
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      color: var(--muted);
 
-    .card { padding: 24px; border: 1px solid var(--line); border-radius: 19px; background: var(--panel); }
+      font-size: .85rem;
 
-    .card h3 { margin: 0 0 8px; font-size: 1.13rem; }
+    }
+
+    section { padding: 60px 0; }
+
+    .section-label {
+
+      color: var(--accent-2);
+
+      font-size: .75rem;
+
+      font-weight: bold;
+
+      text-transform: uppercase;
+
+      letter-spacing: .15em;
+
+    }
+
+    h2.section-title {
+
+      margin: 8px 0 28px;
+
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+
+    }
+
+    .about { max-width: 780px; color: var(--muted); font-size: 1.05rem; }
+
+    .grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+
+    }
+
+    .card {
+
+      padding: 24px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 19px;
+
+      background: var(--panel);
+
+    }
+
+    .card h3 { margin: 0 0 8px; font-size: 1.15rem; }
 
     .card p { margin: 0; color: var(--muted); }
 
     .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
 
-    .tag { padding: 6px 11px; border-radius: 9px; background: rgba(139, 124, 255, .13); color: #c9c2ff; font-size: .86rem; }
+    .tag {
 
-    .project { display: flex; flex-direction: column; min-height: 220px; }
+      padding: 6px 11px;
 
-    .project .project-link { margin-top: auto; padding-top: 22px; color: var(--accent-2); font-weight: 750; }
+      border-radius: 9px;
 
-    .contact-panel { padding: 30px; border-radius: 22px; border: 1px solid var(--line); background: linear-gradient(120deg, rgba(139,124,255,.16), rgba(72,214,197,.10)); }
+      background: rgba(139,124,255,.13);
 
-    footer { border-top: 1px solid var(--line); padding: 25px 0 35px; color: var(--muted); font-size: .9rem; }
+      color: #c9c2ff;
+
+      font-size: .85rem;
+
+    }
+
+    .project { display: flex; flex-direction: column; min-height: 225px; }
+
+    .project-link {
+
+      display: inline-block;
+
+      margin-top: auto;
+
+      padding-top: 22px;
+
+      color: var(--accent-2);
+
+      font-weight: bold;
+
+    }
+
+    .contact-panel {
+
+      padding: 30px;
+
+      border-radius: 22px;
+
+      border: 1px solid var(--line);
+
+      background: linear-gradient(120deg, rgba(139,124,255,.16), rgba(72,214,197,.10));
+
+    }
+
+    footer {
+
+      border-top: 1px solid var(--line);
+
+      padding: 25px 0 35px;
+
+      color: var(--muted);
+
+      font-size: .9rem;
+
+    }
 
     @media (max-width: 760px) {
 
-      .hero { grid-template-columns: 1fr; padding: 72px 0 48px; gap: 32px; }
-
-      .profile-card { max-width: 420px; }
-
-      .navlinks { gap: 13px; font-size: .82rem; }
+      .hero { grid-template-columns: 1fr; padding: 65px 0 45px; gap: 30px; }
 
       .grid { grid-template-columns: 1fr; }
+
+      .navlinks { gap: 12px; font-size: .8rem; }
 
     }
 
     @media (max-width: 420px) {
 
-      .wrap { width: min(100% - 28px, 1080px); }
+      .wrap { width: calc(100% - 28px); }
 
-      nav { min-height: 64px; }
+      .navlinks { gap: 8px; }
 
-      .navlinks { gap: 9px; }
-
-      .navlinks a { font-size: .76rem; }
+      .navlinks a { font-size: .72rem; }
 
     }
 
@@ -172,173 +362,263 @@
 
 <body>
 
-  <header>
+<header>
 
-    <nav class="wrap">
+  <nav class="wrap">
 
-      <a class="brand" href="#home">AT<span>.</span></a>
+    <a class="brand" href="#home">AT<span>.</span></a>
 
-      <div class="navlinks">
+    <div class="navlinks">
 
-        <a href="#about">About</a>
+      <a href="#about">About</a>
 
-        <a href="#skills">Skills</a>
+      <a href="#skills">Skills</a>
 
-        <a href="#projects">Projects</a>
+      <a href="#projects">Projects</a>
 
-        <a href="#contact">Contact</a>
-
-      </div>
-
-    </nav>
-
-  </header>
-
-  <main>
-
-    <div class="wrap hero" id="home">
-
-      <div>
-
-        <div class="eyebrow">Self-taught programming student</div>
-
-        <h1>Hi, I'm<br><span>Alexandr Tikhon.</span></h1>
-
-        <p class="lead">I'm learning software development and building my skills step by step. I enjoy turning ideas into simple, useful web experiences.</p>
-
-        <div class="actions">
-
-          <a class="btn primary" href="#projects">View my project</a>
-
-          <a class="btn" href="https://github.com/mostadont686-byte">GitHub profile ↗</a>
-
-        </div>
-
-      </div>
-
-      <aside class="profile-card">
-
-        <div class="avatar">AT</div>
-
-        <h2>Alexandr Tikhon</h2>
-
-        <p>Aspiring Software Developer</p>
-
-        <span class="location">Almaty, Kazakhstan</span>
-
-      </aside>
+      <a href="#contact">Contact</a>
 
     </div>
 
-    <section id="about">
+  </nav>
 
-      <div class="wrap">
+</header>
 
-        <div class="section-label">01 / About</div>
+<main>
 
-        <h2 class="section-title">A little about me</h2>
+  <div class="wrap hero" id="home">
 
-        <p class="about">I am a self-taught programming student focused on learning the foundations of web development and software engineering. At the moment, I am studying HTML, CSS, JavaScript and Python. My goal is to keep practicing, build real projects and grow into a professional software developer.</p>
+    <div>
 
-      </div>
+      <div class="eyebrow">Self-taught programming student</div>
 
-    </section>
+      <h1>Hi, I'm<br><span>Alexandr Tikhon.</span></h1>
 
-    <section id="skills">
+      <p class="lead">
 
-      <div class="wrap">
+        I'm learning software development and building my skills step by step.
 
-        <div class="section-label">02 / Skills</div>
+        I enjoy turning ideas into useful web experiences.
 
-        <h2 class="section-title">What I'm learning</h2>
+      </p>
 
-        <div class="grid">
+      <div class="actions">
 
-          <article class="card">
+        <a class="btn primary" href="#projects">View my projects</a>
 
-            <h3>Web development</h3>
-
-            <p>Learning how websites are structured, styled and made interactive.</p>
-
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-
-          </article>
-
-          <article class="card">
-
-            <h3>Programming fundamentals</h3>
-
-            <p>Building a foundation in programming logic and problem solving.</p>
-
-            <div class="tags"><span class="tag">Python</span><span class="tag">Problem solving</span><span class="tag">GitHub</span></div>
-
-          </article>
-
-        </div>
+        <a class="btn" href="https://github.com/mostadont686-byte">GitHub profile ↗</a>
 
       </div>
 
-    </section>
+    </div>
 
-    <section id="projects">
+    <aside class="profile-card">
 
-      <div class="wrap">
+      <div class="avatar">AT</div>
 
-        <div class="section-label">03 / Projects</div>
+      <h2>Alexandr Tikhon</h2>
 
-        <h2 class="section-title">Things I've built</h2>
+      <p>Aspiring Software Developer</p>
 
-        <div class="grid">
+      <span class="location">Almaty, Kazakhstan</span>
 
-          <article class="card project">
+    </aside>
 
-            <div>
+  </div>
 
-              <h3>Personal portfolio website</h3>
+  <section id="about">
 
-              <p>My first portfolio project, created while learning HTML and CSS and published with GitHub Pages.</p>
+    <div class="wrap">
 
-              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span></div>
+      <div class="section-label">01 / About</div>
+
+      <h2 class="section-title">A little about me</h2>
+
+      <p class="about">
+
+        I am a self-taught programming student focused on learning the
+
+        foundations of web development and software engineering.
+
+        I am currently studying HTML, CSS, JavaScript and Python.
+
+        My goal is to keep practicing, build real projects and grow
+
+        into a professional software developer.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <section id="skills">
+
+    <div class="wrap">
+
+      <div class="section-label">02 / Skills</div>
+
+      <h2 class="section-title">What I'm learning</h2>
+
+      <div class="grid">
+
+        <article class="card">
+
+          <h3>Web development</h3>
+
+          <p>Learning how websites are structured, styled and made interactive.</p>
+
+          <div class="tags">
+
+            <span class="tag">HTML</span>
+
+            <span class="tag">CSS</span>
+
+            <span class="tag">JavaScript</span>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <h3>Programming fundamentals</h3>
+
+          <p>Building a foundation in programming logic and problem solving.</p>
+
+          <div class="tags">
+
+            <span class="tag">Python</span>
+
+            <span class="tag">Problem solving</span>
+
+            <span class="tag">GitHub</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="projects">
+
+    <div class="wrap">
+
+      <div class="section-label">03 / Projects</div>
+
+      <h2 class="section-title">Things I've built</h2>
+
+      <div class="grid">
+
+        <article class="card project">
+
+          <div>
+
+            <h3>Personal Portfolio Website</h3>
+
+            <p>My personal portfolio website, created while learning HTML and CSS and published with GitHub Pages.</p>
+
+            <div class="tags">
+
+              <span class="tag">HTML</span>
+
+              <span class="tag">CSS</span>
+
+              <span class="tag">GitHub Pages</span>
 
             </div>
 
-            <a class="project-link" href="https://github.com/mostadont686-byte/My-portfolio">View source code ↗</a>
+          </div>
 
-          </article>
+          <a class="project-link" href="https://mostadont686-byte.github.io/My-portfolio/">View Website ↗</a>
 
-        </div>
+        </article>
+
+        <article class="card project">
+
+          <div>
+
+            <h3>JavaScript Calculator</h3>
+
+            <p>A simple interactive calculator with basic arithmetic operations, built as a programming practice project.</p>
+
+            <div class="tags">
+
+              <span class="tag">HTML</span>
+
+              <span class="tag">CSS</span>
+
+              <span class="tag">JavaScript</span>
+
+            </div>
+
+          </div>
+
+          <a class="project-link" href="https://mostadont686-byte.github.io/My-portfolio/calculator.html">Try Calculator ↗</a>
+
+        </article>
+
+        <article class="card project">
+
+          <div>
+
+            <h3>ARKHAT — Real Estate Website</h3>
+
+            <p>A website presenting a private residence in Almaty, featuring property information and a visual presentation. Created with AI-assisted development using Lovable.</p>
+
+            <div class="tags">
+
+              <span class="tag">Lovable</span>
+
+              <span class="tag">AI-assisted development</span>
+
+              <span class="tag">Web Design</span>
+
+            </div>
+
+          </div>
+
+          <a class="project-link" href="https://prime-dwelling-gallery.lovable.app/" target="_blank" rel="noopener noreferrer">View Live Website ↗</a>
+
+        </article>
 
       </div>
 
-    </section>
+    </div>
 
-    <section id="contact">
+  </section>
 
-      <div class="wrap">
+  <section id="contact">
 
-        <div class="section-label">04 / Contact</div>
+    <div class="wrap">
 
-        <h2 class="section-title">Let's connect</h2>
+      <div class="section-label">04 / Contact</div>
 
-        <div class="contact-panel">
+      <h2 class="section-title">Let's connect</h2>
 
-          <p class="about">You can find my code and follow my learning journey on GitHub.</p>
+      <div class="contact-panel">
 
-          <a class="btn primary" href="https://github.com/mostadont686-byte">Visit my GitHub ↗</a>
+        <p class="about">You can find my code and follow my learning journey on GitHub.</p>
 
-        </div>
+        <a class="btn primary" href="https://github.com/mostadont686-byte">Visit my GitHub ↗</a>
 
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </section>
 
-  <footer>
+</main>
 
-    <div class="wrap">© 2026 Alexandr Tikhon · Built while learning</div>
+<footer>
 
-  </footer>
+  <div class="wrap">© 2026 Alexandr Tikhon · Built while learning</div>
+
+</footer>
 
 </body>
 
